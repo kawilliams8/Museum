@@ -11,8 +11,8 @@
 //   })
 // })
 
-describe("Header.vue", () => {
-  it("renders props.msg when passed", () => {
+describe("Example", () => {
+  it("should pass this dummy test", () => {
     expect(true).toBe(true);
   });
 });
