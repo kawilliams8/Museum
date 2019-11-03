@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <Header />
   </div>
 </template>
 
 <script>
 import Header from '../src/components/Header';
+import key from '../src/components/apiKey';
+const axios = require('axios');
 
 export default {
   name: 'app',
   components: {
     Header
+  },
+  data () {
+    return {
+      artObjects: null
+    }
+  },
+  mounted (keyword = 'horse') {
+    axios
+      .get(`https://api.harvardartmuseums.org/object?size=50&keyword=${keyword}&apikey=${key.apiKey}`)
+      .then(response => response)
+      .then(data => (this.artObjects = data.data.records))
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
