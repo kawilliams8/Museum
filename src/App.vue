@@ -14,7 +14,8 @@ const axios = require('axios');
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    Gallery
   },
   data () {
     return {

@@ -14,7 +14,6 @@ export default {
 
 <style>
   #gallery {
-    background-color: #F0F0F0;
-    height: 100px;
+    height: 90vh;
   }
 </style>
