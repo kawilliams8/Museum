@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <Header />
+    <Gallery />
   </div>
 </template>
 
 <script>
 import Header from '../src/components/Header';
+import Gallery from '../src/components/Gallery';
 import key from '../src/components/apiKey';
 const axios = require('axios');
 
@@ -21,7 +23,7 @@ export default {
   },
   mounted (keyword = 'horse') {
     axios
-      .get(`https://api.harvardartmuseums.org/object?size=50&keyword=${keyword}&apikey=${key.apiKey}`)
+      .get(`https://api.harvardartmuseums.org/object?size=2&keyword=${keyword}&apikey=${key.apiKey}`)
       .then(response => response)
       .then(data => (this.artObjects = data.data.records))
   }
