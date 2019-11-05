@@ -1,8 +1,12 @@
 <template>
   <div class="Artwork">
     <h1 class="title">{{artwork.title}}</h1>
-    <h2 class="technique">{{artwork.technique}}</h2>
+    <h2 class="subhead">{{artwork.department}}</h2>
+    <h2 class="subhead">{{artwork.division}}</h2>
+    <h2 class="subhead">{{artwork.technique}}</h2>
     <img :src="artwork.images[0].baseimageurl" alt={artwork.title} class="artworkImage"/>
+    <h3 class="note">{{artwork.people[0].alphasort}}</h3>
+    <h4 class="note">{{artwork.people[0].role}}</h4>
   </div>
 </template>
 
@@ -19,20 +23,24 @@ export default {
     background-color: grey;
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    height: 350px;
+    margin: 35px;
+    min-height: 450px;
     width: 400px;
   }
   .title {
     text-align: center;
   }
-  .technique {
-    font-size: 18px;
+  .subhead {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+  .note {
+    font-size: 16px;
+    padding: 0 20px;
   }
   .artworkImage {
     align-self: center;
-    max-height: 150px;
-    margin-left: 10%;
-    margin-right: 10%;
+    max-height: 180px;
+    margin: 10px 10%;
   }
 </style>
