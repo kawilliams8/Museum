@@ -1,6 +1,5 @@
 <template>
-  <div id="gallery">
-    <h1>Gallery</h1>
+  <div id="gallery">  
         <div v-for="artObject in artObjects" v-bind:key="artObject.id">
           <Artwork v-bind:artwork="artObject"/>
         </div>
@@ -19,5 +18,8 @@ export default {
 <style scoped>
   #gallery {
     height: 90vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 </style>

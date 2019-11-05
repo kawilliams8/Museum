@@ -1,8 +1,8 @@
 <template>
-  <div class="artwork">
+  <div class="Artwork">
     <h1>{{artwork.title}}</h1>
-    <h2>{{artwork.images[0].baseimageurl}}</h2>
-    <img :src="artwork.images[0].baseimageurl" alt={artwork.title}/>
+    <h2>{{artwork.technique}}</h2>
+    <img :src="artwork.images[0].baseimageurl" alt={artwork.title} class="artworkImage"/>
   </div>
 </template>
 
@@ -15,8 +15,13 @@ export default {
 </script>
 
 <style>
-  .artwork {
+  .Artwork {
     background-color: grey;
     margin: 10px;
+    height: 350px;
+    width: 400px;
+  }
+  .artworkImage {
+    height: 200px;
   }
 </style>
