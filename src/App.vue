@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Header />
-    <h3>key: {{key}} </h3>
     <Gallery v-bind:artObjects="this.artObjects"/>
   </div>
 </template>
