@@ -8,7 +8,6 @@
 <script>
 import Header from '../src/components/Header';
 import Gallery from '../src/components/Gallery';
-import key from '../src/components/apiKey';
 const axios = require('axios');
 
 export default {
