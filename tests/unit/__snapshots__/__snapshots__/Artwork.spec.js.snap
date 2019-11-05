@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Gallery.vue renders props.mockArtObjects when passed 1`] = `
-<div class="artwork" mockartobject="[object Object]">
-  <h1>Artwork</h1>
-</div>
-`;
