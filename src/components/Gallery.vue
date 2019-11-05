@@ -1,13 +1,9 @@
 <template>
   <div id="gallery">
     <h1>Gallery</h1>
-      <ul id="artObjectList">
-        <li v-for="artObject in artObjects" v-bind:key="artObject.objectid">
-          {{artObject.title}}
-          {{artObject.dated}}
-          <Artwork />
-        </li>
-      </ul>
+        <div v-for="artObject in artObjects" v-bind:key="artObject.id">
+          <Artwork v-bind:artwork="artObject"/>
+        </div>
   </div>
 </template>
 
@@ -20,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   #gallery {
     height: 90vh;
   }
