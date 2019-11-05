@@ -1,25 +1,25 @@
 <template>
-  <div id="gallery">
-    <h1>Gallery</h1>
-      <ul id="artObjectList">
-        <li v-for="artObject in artObjects" v-bind:key="artObject.objectid">
-          {{artObject.title}}
-          {{artObject.dated}}
-        </li>
-      </ul>
+  <div id="gallery">  
+        <div v-for="artObject in artObjects" v-bind:key="artObject.id">
+          <Artwork v-bind:artwork="artObject"/>
+        </div>
   </div>
 </template>
 
 <script>
+import Artwork from '@/components/Artwork.vue';
 export default {
   name: 'Gallery',
-  components: {},
+  components: {Artwork},
   props: ['artObjects']
 }
 </script>
 
-<style>
+<style scoped>
   #gallery {
     height: 90vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 </style>

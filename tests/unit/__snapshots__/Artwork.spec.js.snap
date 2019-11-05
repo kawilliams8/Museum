@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Artwork.vue should match the snapshot with props passed 1`] = `
+<div
+  class="Artwork"
+>
+  <h1>
+    Bridle Trapping
+  </h1>
+   
+  <h2>
+    Cast, lost-wax process
+  </h2>
+   
+  <img
+    alt="{artwork.title}"
+    class="artworkImage"
+    src="https://nrs.harvard.edu/urn-3:HUAM:LEG251185_dynmc"
+  />
+</div>
+`;

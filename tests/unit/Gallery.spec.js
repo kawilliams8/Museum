@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 import Gallery from '@/components/Gallery.vue'
 
 describe('Gallery.vue', () => {
-  it('renders props.mockArtObjects when passed', () => {
+  it('should match the snapshot with props passed', () => {
     const mockArtObjects = [
       [
         {
