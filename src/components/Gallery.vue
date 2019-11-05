@@ -5,15 +5,17 @@
         <li v-for="artObject in artObjects" v-bind:key="artObject.objectid">
           {{artObject.title}}
           {{artObject.dated}}
+          <Artwork />
         </li>
       </ul>
   </div>
 </template>
 
 <script>
+import Artwork from '@/components/Artwork.vue';
 export default {
   name: 'Gallery',
-  components: {},
+  components: {Artwork},
   props: ['artObjects']
 }
 </script>
