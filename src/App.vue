@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <Search />
     <Gallery v-bind:artObjects="this.artObjects"/>
   </div>
 </template>
@@ -8,6 +9,7 @@
 <script>
 import Header from '../src/components/Header';
 import Gallery from '../src/components/Gallery';
+import Search from '../src/components/Search';
 import key from '../src/components/apiKey';
 const axios = require('axios');
 
@@ -15,7 +17,8 @@ export default {
   name: 'app',
   components: {
     Header,
-    Gallery
+    Gallery,
+    Search
   },
   data () {
     return {
