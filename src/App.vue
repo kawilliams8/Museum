@@ -24,7 +24,7 @@ export default {
   },
   mounted (keyword = 'horse') {
     axios
-      .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey=${key.apiKey}`)
+      .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey=${process.env.HARVARD_API_KEY}`)
       .then(data => (this.artObjects = data.data.records))
   }
 }
