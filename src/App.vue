@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <Header />
-    <div>KEY: {{ key }}</div>
-    <div>URL: {{ url }}</div>
     <Gallery v-bind:artObjects="this.artObjects"/>
   </div>
 </template>
@@ -26,7 +24,7 @@ export default {
   },
   mounted (keyword = 'horse') {
     axios
-      .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey={{key}}`)
+      .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey={key}`)
       .then(data => (this.artObjects = data.data.records))
   }
 }
