@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery.vue renders props.mockArtObjects when passed 1`] = `
+<div id="gallery" mockartobjects="[object Object],[object Object]">
+  <h1>Gallery</h1>
+  <ul id="artObjectList"></ul>
+</div>
+`;
