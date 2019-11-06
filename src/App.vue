@@ -25,7 +25,7 @@ export default {
       key: process.env.VUE_APP_KEY
     }
   },
-  mounted (keyword = 'cat') {
+  mounted (keyword = 'dog') {
     axios
       .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey=${process.env.VUE_APP_KEY}`)
       .then(data => (this.artObjects = data.data.records))
@@ -41,6 +41,7 @@ export default {
 }
 
 body {
+  background-color: #f6f6f6;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;

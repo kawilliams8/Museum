@@ -22,7 +22,8 @@ export default {
 
 <style>
   .Artwork {
-    background-color: grey;
+    background-color: white;
+    border: 5px solid #323232;
     display: flex;
     flex-direction: column;
     margin: 35px;
@@ -45,7 +46,8 @@ export default {
   }
   .artworkImage {
     align-self: center;
-    max-height: 180px;
+    max-width: 300px;
+    height: 180px;
     margin: 10px 10%;
   }
 </style>

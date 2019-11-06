@@ -11,7 +11,7 @@ import Artwork from '@/components/Artwork.vue';
 export default {
   name: 'Gallery',
   components: {Artwork},
-  props: ['artObjects']
+  props: {artObjects: Array}
 }
 </script>
 
