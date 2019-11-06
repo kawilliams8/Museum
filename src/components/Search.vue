@@ -8,16 +8,15 @@
 <script>
 export default {
   name: 'Search',
-  props: ['searchterm'],
   data() {
     return {
-      usersearchterm: ""
+      term: ""
     };
   },
   methods: {
     searchTerm(e) {
       e.preventDefault();
-      this.$emit("update-search", this.usersearchterm);
+      this.$emit("update-search", this.term);
       this.usersearchterm = "";
     }
   }

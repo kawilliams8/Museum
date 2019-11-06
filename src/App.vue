@@ -19,7 +19,7 @@ export default {
     Gallery,
     Search
   },
-  props: ['searchterm'],
+  props: ['term'],
   data () {
     return {
       artObjects: null,
@@ -32,8 +32,10 @@ export default {
       .then(data => (this.artObjects = data.data.records))
   },
   methods: {
-    updateSearch() {
-      // console.log(searchterm)
+    updateSearch(term) {
+      axios
+      .get(`https://api.harvardartmuseums.org/object?size=30&keyword=${term}&apikey=${process.env.VUE_APP_KEY}`)
+      .then(data => (this.artObjects = data.data.records))
     }
   }
 }
