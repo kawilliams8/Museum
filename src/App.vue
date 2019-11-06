@@ -10,7 +10,6 @@
 import Header from '../src/components/Header';
 import Gallery from '../src/components/Gallery';
 import Search from '../src/components/Search';
-import key from '../src/components/apiKey';
 const axios = require('axios');
 
 export default {
@@ -22,12 +21,13 @@ export default {
   },
   data () {
     return {
-      artObjects: null
+      artObjects: null,
+      key: process.env.VUE_APP_KEY
     }
   },
-  mounted (keyword = 'horse') {
+  mounted (keyword = 'cat') {
     axios
-      .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey=${key.apiKey}`)
+      .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey=${process.env.VUE_APP_KEY}`)
       .then(data => (this.artObjects = data.data.records))
   }
 }

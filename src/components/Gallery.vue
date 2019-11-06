@@ -17,9 +17,9 @@ export default {
 
 <style scoped>
   #gallery {
-    height: 90vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 </style>

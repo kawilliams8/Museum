@@ -4,6 +4,12 @@ import Artwork from "@/components/Artwork.vue";
 describe("Artwork.vue", () => {
   it("should match the snapshot with props passed", () => {
     const mockArtwork = {
+        "people": [
+          {
+            "role": "artist",
+            "alphasort": "An artist"
+          }
+        ],
         "accessionyear":1920,
         "technique":"Cast, lost-wax process",
         "mediacount":0,
