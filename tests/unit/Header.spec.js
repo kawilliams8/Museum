@@ -3,7 +3,7 @@ import Header from "@/components/Header.vue";
 
 describe("Header.vue", () => {
 
-  it('should pass the snapshot with all props passed in', () => {
+  it('should pass the snapshot with props passed in', () => {
     const wrapper = shallowMount(Header);
     expect(wrapper.element).toMatchSnapshot();
   })
