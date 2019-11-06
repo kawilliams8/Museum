@@ -30,6 +30,11 @@ export default {
     axios
       .get(`https://api.harvardartmuseums.org/object?size=30&keyword=${keyword}&apikey=${process.env.VUE_APP_KEY}`)
       .then(data => (this.artObjects = data.data.records))
+  },
+  methods: {
+    updateSearch() {
+      // console.log(searchterm)
+    }
   }
 }
 </script>
