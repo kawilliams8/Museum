@@ -3,10 +3,12 @@
     <h1 class="title">{{artwork.title}}</h1>
     <h2 class="subhead">{{artwork.department}}</h2>
     <h2 class="subhead">{{artwork.division}}</h2>
-    <h2 class="subhead">{{artwork.technique}}</h2>
     <img :src="artwork.images[0].baseimageurl" alt={artwork.title} class="artworkImage"/>
-    <h3 class="note">{{artwork.people[0].alphasort}}</h3>
-    <h4 class="note">{{artwork.people[0].role}}</h4>
+    <div class="note-container">
+      <h3 class="note">{{artwork.people[0].alphasort}}</h3>
+      <h4 class="note">{{artwork.people[0].role}}</h4>
+      <h2 class="note">{{artwork.technique}}</h2>
+    </div>
   </div>
 </template>
 
@@ -34,9 +36,12 @@ export default {
     font-size: 16px;
     padding: 0 20px;
   }
+  .note-container {
+    margin-top: 80px;
+  }
   .note {
-    font-size: 16px;
-    padding: 0 20px;
+    font-size: 12px;
+    padding: 2px 20px;
   }
   .artworkImage {
     align-self: center;
