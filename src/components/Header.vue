@@ -15,6 +15,8 @@ export default {
 <style>
   #header {
     background-color: #F0F0F0;
-    height: 10vh;
+    font-size: 36px;
+    height: 12vh;
+    text-align: center;
   }
 </style>
