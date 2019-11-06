@@ -19,7 +19,7 @@ This project began with many difficulties installing Vue on two computers, event
 
 ## Results
 
-
+![screenshot](https://github.com/kawilliams8/Museum/blob/master/museum.png)
 
 ## Tech Stack
 * Vue CLI
