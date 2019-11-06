@@ -4,12 +4,22 @@ exports[`Artwork.vue should match the snapshot with props passed 1`] = `
 <div
   class="Artwork"
 >
-  <h1>
+  <h1
+    class="title"
+  >
     Bridle Trapping
   </h1>
    
-  <h2>
-    Cast, lost-wax process
+  <h2
+    class="subhead"
+  >
+    Department of Ancient and Byzantine Art & Numismatics
+  </h2>
+   
+  <h2
+    class="subhead"
+  >
+    Asian and Mediterranean Art
   </h2>
    
   <img
@@ -17,5 +27,27 @@ exports[`Artwork.vue should match the snapshot with props passed 1`] = `
     class="artworkImage"
     src="https://nrs.harvard.edu/urn-3:HUAM:LEG251185_dynmc"
   />
+   
+  <div
+    class="note-container"
+  >
+    <h3
+      class="note"
+    >
+      An artist
+    </h3>
+     
+    <h4
+      class="note"
+    >
+      artist
+    </h4>
+     
+    <h2
+      class="note"
+    >
+      Cast, lost-wax process
+    </h2>
+  </div>
 </div>
 `;
