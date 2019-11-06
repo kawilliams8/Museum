@@ -22,9 +22,9 @@ export default {
       key: process.env.VUE_APP_KEY
     }
   },
-  mounted (keyword = 'horse') {
+  mounted (keyword = 'cat') {
     axios
-      .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey={key}`)
+      .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey=${process.env.VUE_APP_KEY}`)
       .then(data => (this.artObjects = data.data.records))
   }
 }
