@@ -27,10 +27,11 @@ export default {
     display: flex;
     flex-direction: column;
     margin: 35px;
-    min-height: 450px;
+    min-height: 475px;
     width: 400px;
   }
   .title {
+    font-size: 26px;
     text-align: center;
   }
   .subhead {
@@ -41,6 +42,7 @@ export default {
     margin-top: 80px;
   }
   .note {
+    font-style: italic;
     font-size: 12px;
     padding: 2px 20px;
   }

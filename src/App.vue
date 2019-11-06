@@ -25,9 +25,9 @@ export default {
       key: process.env.VUE_APP_KEY
     }
   },
-  mounted (keyword = 'dog') {
+  mounted (keyword = 'William Henry Jackson') {
     axios
-      .get(`https://api.harvardartmuseums.org/object?size=12&keyword=${keyword}&apikey=${process.env.VUE_APP_KEY}`)
+      .get(`https://api.harvardartmuseums.org/object?size=30&keyword=${keyword}&apikey=${process.env.VUE_APP_KEY}`)
       .then(data => (this.artObjects = data.data.records))
   }
 }
@@ -42,7 +42,7 @@ export default {
 
 body {
   background-color: #f6f6f6;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Libre Baskerville', serif;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
