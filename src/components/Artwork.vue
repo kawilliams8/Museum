@@ -6,7 +6,7 @@
     <img :src="artwork.images[0].baseimageurl" alt={artwork.title} class="artworkImage"/>
     <div class="note-container">
       <h3 class="note">{{artwork.people[0].alphasort}}</h3>
-      <h4 class="note">{{artwork.people[0].role}}</h4>
+      <h4 class="note">{{artwork.dated}}</h4>
       <h2 class="note">{{artwork.technique}}</h2>
     </div>
   </div>

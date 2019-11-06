@@ -19,6 +19,7 @@ export default {
     Gallery,
     Search
   },
+  props: ['searchterm'],
   data () {
     return {
       artObjects: null,

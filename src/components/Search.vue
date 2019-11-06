@@ -1,16 +1,14 @@
 <template>
   <div id="Search">  
-    <input class="input" v-model="keyword" placeholder="Enter a search term">
-    <p>Message is: {{ keyword }}</p>
-    <input class="input" v-model="message" placeholder="edit me">
-    <p>Message is: {{ message }}</p>
+    <h3>Search: </h3>
+    <input v-model:="searchterm" placeholder="Enter a search term" class="input">
   </div>
 </template>
 
 <script>
 export default {
   name: 'Search',
-  components: {}
+  props: ['searchterm']
 }
 </script>
 
