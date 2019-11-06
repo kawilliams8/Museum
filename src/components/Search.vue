@@ -1,20 +1,43 @@
 <template>
-  <div id="Search">  
-    <h3>Search: </h3>
-    <input v-model:="searchterm" placeholder="Enter a search term" class="input">
-  </div>
+  <form id="Search" @submit="searchTerm">  
+    <input v-model="term" name="term" type="text" placeholder="Enter a search keyword">
+    <button :disabled="!term">Submit</button>
+  </form>
 </template>
 
 <script>
 export default {
   name: 'Search',
-  props: ['searchterm']
+  data() {
+    return {
+      term: ""
+    };
+  },
+  methods: {
+    searchTerm(e) {
+      e.preventDefault();
+      this.$emit("update-search", this.term);
+      this.usersearchterm = "";
+    }
+  }
 }
 </script>
 
 <style scoped>
-  .input {
-    height: 30px;
-    width: 300px;
+  #Search {
+    display: flex;
+    margin: 10px 33%;
+    width: 500px;
+  }
+  input {
+    font-size: 18px;
+    height: 40px;
+    padding-left: 5px;
+    width: 350px;
+  }
+  button {
+    font-size: 18px;
+    margin-left: 10px;
+    width: 125px;
   }
 </style>
