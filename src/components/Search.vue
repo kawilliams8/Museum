@@ -1,7 +1,7 @@
 <template>
   <div id="Search">  
     <h3>Search: </h3>
-    <input v-model:="searchterm" placeholder="Enter a search term" class="input">
+    <input v-model:="searchterm" placeholder="Enter a search keyword" class="input">
   </div>
 </template>
 
@@ -13,8 +13,18 @@ export default {
 </script>
 
 <style scoped>
+  #Search {
+    display: flex;
+    margin: 10px 33%;
+  }
+  h3 {
+    font-size: 28px;
+    margin-right: 10px;
+  }
   .input {
-    height: 30px;
-    width: 300px;
+    font-size: 18px;
+    height: 40px;
+    padding-left: 5px;
+    width: 375px;
   }
 </style>
