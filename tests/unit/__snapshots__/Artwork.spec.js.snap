@@ -40,7 +40,7 @@ exports[`Artwork.vue should match the snapshot with props passed 1`] = `
     <h4
       class="note"
     >
-      artist
+      6th-3rd century BCE
     </h4>
      
     <h2
