@@ -10,7 +10,7 @@
 import Header from '../src/components/Header';
 import Gallery from '../src/components/Gallery';
 import Search from '../src/components/Search';
-const axios = require('axios');
+const axios = require('axios'); 
 
 export default {
   name: 'app',
@@ -19,11 +19,10 @@ export default {
     Gallery,
     Search
   },
-  props: ['term'],
   data () {
     return {
       artObjects: null,
-      key: process.env.VUE_APP_KEY
+      key: process.env.VUE_APP_KEY,
     }
   },
   mounted (keyword = 'William Henry Jackson') {
@@ -32,7 +31,8 @@ export default {
       .then(data => (this.artObjects = data.data.records))
   },
   methods: {
-    updateSearch(term = 'cat') {
+    updateSearch(term) {
+      console.log('term in App', term)
       axios
       .get(`https://api.harvardartmuseums.org/object?size=30&keyword=${term}&apikey=${process.env.VUE_APP_KEY}`)
       .then(data => (this.artObjects = data.data.records))
