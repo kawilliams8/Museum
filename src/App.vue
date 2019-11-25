@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Search v-on:update-search="updateSearch(term)"/>
+    <Search v-on:update-search="updateSearch"/>
     <Gallery v-bind:artObjects="this.artObjects"/>
   </div>
 </template>
@@ -31,8 +31,7 @@ export default {
       .then(data => (this.artObjects = data.data.records))
   },
   methods: {
-    updateSearch(term) {
-      console.log('term in App', term)
+    updateSearch: function(term) {
       axios
       .get(`https://api.harvardartmuseums.org/object?size=30&keyword=${term}&apikey=${process.env.VUE_APP_KEY}`)
       .then(data => (this.artObjects = data.data.records))

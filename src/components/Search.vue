@@ -16,9 +16,8 @@ export default {
   methods: {
     searchTerm(e) {
       e.preventDefault();
-      console.log('this.term in search', this.term)
       this.$emit("update-search", this.term);
-      this.usersearchterm = "";
+      this.term = "";
     }
   }
 }
