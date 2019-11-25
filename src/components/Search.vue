@@ -17,7 +17,7 @@ export default {
     searchTerm(e) {
       e.preventDefault();
       this.$emit("update-search", this.term);
-      this.usersearchterm = "";
+      this.term = "";
     }
   }
 }
